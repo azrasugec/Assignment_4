@@ -224,3 +224,43 @@ Additionally, all explanations written in this README file were supported and st
 | `__iter__` method         | Makes custom classes iterable. Essential for using `for` loops and converting to lists. |
 | `git add/commit/push`     | Git version control commands for staging, saving, and uploading code to a remote repository. |
 | ✔️ green check on GitHub   | Shows that workflows (like tests) completed successfully. Indicates build and test status clearly. |
+
+
+### 💥 Testing a Failing Workflow on Purpose
+
+To better understand how GitHub Actions responds to a failure, I intentionally modified the `.yml` file to trigger an error and observe how it is visually represented in the GitHub interface.
+
+- First, I selected the section of the `.yml` file where the test command is located:  
+  ![Selecting test section - ss20](img/ss20.png)
+
+- Then, I added a line of code that causes a failure (`exit 1`):  
+  ![Inserting exit 1 - ss21](img/ss21.png)
+
+> This command (`exit 1`) forces the process to exit with an error. In CI systems like GitHub Actions, any non-zero exit code is treated as a failure.
+
+- After pushing the change, GitHub initially displays a `pending` status:  
+  ![Pending state - ss22](img/ss22.png)
+
+> `Pending` means GitHub has detected the new workflow run and is preparing the environment. The job has not completed yet, so no success or failure has been registered at that point.
+
+- In the Actions tab, the job is shown with a red ❌ icon, indicating that the workflow failed:  
+  ![Workflow failure shown in Actions - ss23](img/ss23.png)
+
+- Lastly, in the Code tab, the related commit is also marked with a red X:  
+  ![Red X on commit - ss24](img/ss24.png)
+
+This test helped me understand what a failed CI workflow looks like and how GitHub reflects it across the interface.
+
+### ❗ Common Errors in This Assignment
+
+| Error Type           | Possible Cause                                                                 | Example/Error Message                          | How to Fix                                                        |
+|----------------------|----------------------------------------------------------------------------------|-------------------------------------------------|-------------------------------------------------------------------|
+| `AttributeError`     | Using a method or property not defined in a class                               | `'LinkedList' object has no attribute '__iter__'` | Implement the `__iter__` method correctly in `LinkedList` class  |
+| `TypeError`          | Passing incompatible data type to a function or method                          | `object is not iterable`                         | Ensure your `LinkedList` is iterable with `__iter__`              |
+| `SyntaxError`        | Writing invalid Python code                                                     | `SyntaxError: invalid syntax`                   | Check indentation, colons, and closing parentheses                |
+| `NameError`          | Referring to a variable or function that hasn't been defined                    | `NameError: name 'Node' is not defined`         | Make sure all classes/functions are defined before being used     |
+| `ModuleNotFoundError`| Importing a module or file that doesn't exist or has a typo in the path         | `ModuleNotFoundError: No module named 'ds'`     | Ensure file names and import paths are correct                    |
+| `ImportError`        | Trying to import a specific name that doesn’t exist in a module                 | `cannot import name 'LinkedList' from 'ds'`     | Double-check class/function names in the source file              |
+| `AssertionError`     | Unit test fails because expected output doesn't match actual output             | `AssertionError: [3, 2, 1] != [1, 2, 3]`         | Debug your sorting logic                                          |
+| `IndentationError`   | Code blocks not properly indented                                               | `IndentationError: unexpected indent`           | Make sure indentation is consistent (4 spaces recommended)        |
+| `exit 1` (manual)    | Manually inserted failure to test GitHub workflow reactions                     | ❌ red X on workflow                            | Remove or comment out the `exit 1` line from `.yml` after testing |
