@@ -167,39 +167,10 @@ The file defines a pipeline with the following steps:
 - **Checkout**: Retrieves the project code from GitHub
 - **Python Setup**: Installs Python 3.10
 - **Dependencies**: Installs required Python packages
-- **Testing**: Runs all test cases inside the `tests/` directory using `unittest discover`
-
+--**Testing**: Runs all test cases inside the `tests/` directory using `unittest discover`
 This automation increases confidence in the stability of the code and ensures that all updates are validated continuously.
 
-```yaml
-name: Run Tests
-
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.10"
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-      - name: Run tests
-        run: |
-          python -m unittest discover tests```
+![Step 11](img/ss11.png)
 
 
 
