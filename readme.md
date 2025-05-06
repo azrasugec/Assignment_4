@@ -139,8 +139,7 @@ The tests confirm that the sorting logic is consistent across both data structur
 
 To validate the functionality of the `bubble_sort` algorithm, I ran the test suite using the command:
 
-```bash
-python -m unittest discover tests
+![Step 9](img/ss9.png)
 
 
 ### Step 10 – Automating tests with GitHub Actions
