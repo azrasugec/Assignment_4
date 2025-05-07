@@ -281,3 +281,18 @@ I actively used ChatGPT throughout this assignment not to generate code automati
 
 In short, I used ChatGPT as an assistant to ask, review, clarify, and learn more deeply as I built the project on my own.
 
+---
+
+### 🚫 Submission Issue on GitHub Classroom
+
+Although the assignment was completed and pushed successfully to my personal GitHub repository, I encountered an issue when trying to submit it to the official GitHub Classroom repository.
+
+- ❌ When attempting to push, I received a **403 error** in the terminal, indicating that I did not have write access:  
+  ![403 Error Message in Terminal](img/ss25.png)
+
+- ✅ However, as seen on GitHub Classroom, the repository was correctly assigned to me under my name:  
+  ![Classroom Repo Assignment Confirmation](img/ss26.png)
+
+> 📌 This issue suggests that, even though the repository was visible under my name in the Classroom system, technically my GitHub account was not properly authorized for write access.
+
+As a result, I could not complete the final push to the Classroom-assigned repository. I documented the entire process here for transparency.
