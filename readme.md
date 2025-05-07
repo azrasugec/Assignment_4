@@ -264,3 +264,22 @@ This test helped me understand what a failed CI workflow looks like and how GitH
 | `AssertionError`     | Unit test fails because expected output doesn't match actual output             | `AssertionError: [3, 2, 1] != [1, 2, 3]`         | Debug your sorting logic                                          |
 | `IndentationError`   | Code blocks not properly indented                                               | `IndentationError: unexpected indent`           | Make sure indentation is consistent (4 spaces recommended)        |
 | `exit 1` (manual)    | Manually inserted failure to test GitHub workflow reactions                     | ❌ red X on workflow                            | Remove or comment out the `exit 1` line from `.yml` after testing |
+
+### AI Assistance – How I Used ChatGPT
+
+I actively used ChatGPT throughout this assignment not to generate code automatically, but to support my understanding, improve explanations, and guide my documentation process. Here's how I interacted with the AI:
+
+- **I asked detailed questions**, step by step, about what certain code snippets do — especially in `ds.py` and `main.py`. For example, I uploaded screenshots of my code and asked the AI to explain what each function or method does.
+
+- **I requested English descriptions** to help me write a clear and professional `README.md`. After each explanation, I also asked for a Turkish version to ensure I fully understood the concept before using it.
+
+- **I verified each suggestion manually.** I didn’t copy-paste blindly; instead, I evaluated the logic and applied only what matched my assignment goals.
+
+- **I simulated a GitHub Actions failure** (by adding `exit 1`) and asked ChatGPT to explain the purpose and impact of each step — from “pending” to “red cross”.
+
+- **I discussed error messages.** When I encountered issues like `AttributeError` or confusion about `main` vs `master` branches, I uploaded screenshots and asked the AI for clarification.
+
+- **I collaborated on documentation.** I shared what screenshots I wanted to include in the `README.md`, and the AI helped me write matching explanations, create tables, and organize the content logically.
+
+In short, I used ChatGPT as an assistant — like a tutor sitting beside me — to ask, review, clarify, and learn more deeply as I built the project on my own.
+
