@@ -267,11 +267,9 @@ This test helped me understand what a failed CI workflow looks like and how GitH
 
 ### AI Assistance – How I Used ChatGPT
 
-I actively used ChatGPT throughout this assignment not to generate code automatically, but to support my understanding, improve explanations, and guide my documentation process. Here's how I interacted with the AI:
+I actively used ChatGPT throughout this assignment not to generate code automatically, but to support my understanding, improve explanations, and guide my documentation process.
 
 - **I asked detailed questions**, step by step, about what certain code snippets do — especially in `ds.py` and `main.py`. For example, I uploaded screenshots of my code and asked the AI to explain what each function or method does.
-
-- **I requested English descriptions** to help me write a clear and professional `README.md`. After each explanation, I also asked for a Turkish version to ensure I fully understood the concept before using it.
 
 - **I verified each suggestion manually.** I didn’t copy-paste blindly; instead, I evaluated the logic and applied only what matched my assignment goals.
 
