@@ -279,5 +279,5 @@ I actively used ChatGPT throughout this assignment not to generate code automati
 
 - **I collaborated on documentation.** I shared what screenshots I wanted to include in the `README.md`, and the AI helped me write matching explanations, create tables, and organize the content logically.
 
-In short, I used ChatGPT as an assistant — like a tutor sitting beside me — to ask, review, clarify, and learn more deeply as I built the project on my own.
+In short, I used ChatGPT as an assistant to ask, review, clarify, and learn more deeply as I built the project on my own.
 
